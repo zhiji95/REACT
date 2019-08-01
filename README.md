@@ -1,5 +1,7 @@
 # REACT
-An react project
+My notes for React and Javascript syntax. 
+
+- [Javascript syntax](./Javascript_syntax.md)
 
 # setup
 A library for web request
