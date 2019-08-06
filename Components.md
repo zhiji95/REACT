@@ -32,10 +32,24 @@ const componentName = props => {
 - `render()`: prepare and structure your JSX code
 - render child components
 - `componentDidMount()`: Cause side-effect, don't call setState here!
-#### update props
+#### update
 - `getDerivedStateFromProps(props, state)`: Sync state to props.
 - `shouldComponentupdate(nextProps, nextState)`: decide whether to countinue or not.
 - `render()`: prepare and structure your JSX code
 - render child components
 - `getSnapShotBeforeUpdate(prevProps, prevState)`: Last minute DOM ops
-- `componentDidMount()`: Cause side-effect
+- `componentDidupdate(prevProps, preState, snapShot)`: Cause side-effect
+
+## 4. useEffect()
+- `useEffect()`: a react hook combines functionalities of all lifecycle hook
+```javascript
+import React, {useEffect} from 'react'
+
+useEffect(() => {
+    console.log("useEffect"); 
+
+    setTimeout(() => {
+        alert('sssss');
+    }, 1000);
+}, [props.persons]); //we only runs when props.persons changed
+```
