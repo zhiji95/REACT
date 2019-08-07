@@ -35,6 +35,15 @@ const componentName = props => {
 #### update
 - `getDerivedStateFromProps(props, state)`: Sync state to props.
 - `shouldComponentupdate(nextProps, nextState)`: decide whether to countinue or not.
+```javascript
+shouldComponentupdate(nextProps, nextState) {
+    if (nextProps.persons !== this.props.persons) {
+        return true;
+    } else {
+        return false;
+    }
+}
+```
 - `render()`: prepare and structure your JSX code
 - render child components
 - `getSnapShotBeforeUpdate(prevProps, prevState)`: Last minute DOM ops
@@ -53,3 +62,25 @@ useEffect(() => {
     }, 1000);
 }, [props.persons]); //we only runs when props.persons changed
 ```
+
+## 5. React.memo()
+```javascript
+export default React.memo(cockpit); // prevent unnecessary rendering
+```
+
+## 6. React.Fragment
+wrap around adjacent JSX elements
+```javascript
+<Fragment>
+</Fragment>
+// Is the same as
+
+<Aux>
+</Aux>
+
+const aux = prop => props.children;
+
+export default aux;
+```
+
+## 7. Higher Order Components(HOC)
