@@ -5,6 +5,7 @@ My notes for React and Javascript syntax.
 - [React syntax](./React_syntax.md)
 - [List and Conditional](./lists&conditionals.md)
 - [Components](./Components.md)
+- [Redux](./Redux.md)
 
 # setup
 A library for web request
